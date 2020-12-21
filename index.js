@@ -4,10 +4,10 @@ btn.addEventListener("click",getUserName)
 function getUserName(){
     var name = document.getElementById("userName")
     var userName = name.value
-    if(userName == null || userName == ""){
-       alert("Please enter your name")
-    }else{
-        var date = document.getElementById("birthday").value
+    var date = document.getElementById("birthday").value
+    if(userName == null || userName == "" || date ==null || date==""){
+       alert("Please enter all details")
+    }else{        
         var isLeap = checkLeap(date)
         console.log(isLeap)
         if(isLeap){
